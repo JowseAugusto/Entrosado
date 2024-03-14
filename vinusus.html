@@ -30,6 +30,22 @@
             text-align: center;
             font-style: italic;
         }
+
+        /* Estilo para o botão */
+        button#changeColorButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button#changeColorButton:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -58,8 +74,13 @@
 
     <script>
         document.getElementById('changeColorButton').addEventListener('click', function() {
-            // Gere uma cor aleatória
-            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            // Gere valores RGB aleatórios
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+
+            // Crie a cor no formato RGB
+            var randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
             
             // Altere a cor de fundo do body
             document.body.style.backgroundColor = randomColor;
