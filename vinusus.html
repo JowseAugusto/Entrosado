@@ -20,71 +20,77 @@
             max-width: 400px;
             padding: 20px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        /* Restante do CSS fornecido anteriormente... */
-
-        /* Estilo para o que somos */
-        p.what-we-are {
-            text-align: center;
-            font-style: italic;
-        }
-
-        /* Estilo para o botão */
-        button#changeColorButton {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        button#changeColorButton:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <form>
-        <fieldset> 
-            <legend>Login</legend>
-            <p><label>Usuário <input type="text" name="usuario" required></label></p>
-            <p><label>Senha <input type="password" name="senha" required></label></p>
-        </fieldset>
-        <p><button type="submit">Submeter</button></p>
-    </form>
-    
-    <img src="Vi.jpg" alt="Tanjiro">  
-    <p>O vinicius é o mais lindo!!!!</p>
-    <p> O MAIS LINDO</p>
-    <form>
-        <p><label>Data e hora do agendamento para falar com o home <input type="datetime-local" name="dateAndTime"></label></p>
-        <p><button type="submit">Submeter</button></p>
-    </form>
-
-    <p>O que somos:</p>
-    <br>
-    <p class="what-we-are">Sou o cara mais lindo do mundo, programo em Python, Delphi, C++ e Java (vulgo Jarva)</p>
-
-    <button id="changeColorButton">Mudar Cor de Fundo</button>
-
-    <script>
-        document.getElementById('changeColorButton').addEventListener('click', function() {
-            // Gere valores RGB aleatórios
-            var r = Math.floor(Math.random() * 256);
-            var g = Math.floor(Math.random() * 256);
-            var b = Math.floor(Math.random() * 256);
-
-            // Crie a cor no formato RGB
-            var randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+            border-radi<!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Sitinho do vinusus</title>
+                <style>
+                    /* Estilo geral */
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        transition: background-color 0.5s ease;
+                    }
             
-            // Altere a cor de fundo do body
-            document.body.style.backgroundColor = randomColor;
-        });
-    </script>
-</body>
-</html>
+                    /* Estilo para o formulário */
+                    form {
+                        margin: 20px auto;
+                        max-width: 400px;
+                        padding: 20px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+            
+                    /* Restante do CSS fornecido anteriormente... */
+            
+                    /* Estilo para o que somos */
+                    p.what-we-are {
+                        text-align: center;
+                        font-style: italic;
+                    }
+                </style>
+            </head>
+            <body>
+                <form>
+                    <fieldset> 
+                        <legend>Login</legend>
+                        <p><label>Usuário <input type="text" name="usuario" required></label></p>
+                        <p><label>Senha <input type="password" name="senha" required></label></p>
+                    </fieldset>
+                    <p><button type="submit">Submeter</button></p>
+                </form>
+                
+                <img src="Vi.jpg" alt="Tanjiro">  
+                <p>O vinicius é o mais lindo!!!!</p>
+                <p> O MAIS LINDO</p>
+                <form>
+                    <p><label>Data e hora do agendamento para falar com o home <input type="datetime-local" name="dateAndTime"></label></p>
+                    <p><button type="submit">Submeter</button></p>
+                </form>
+            
+                <p>O que somos:</p>
+                <br>
+                <p class="what-we-are">Sou o cara mais lindo do mundo, programo em Python, Delphi, C++ e Java (vulgo Jarva)</p>
+            
+                <script>
+                    function changeBackgroundColor() {
+                        // Gere valores RGB aleatórios
+                        var r = Math.floor(Math.random() * 256);
+                        var g = Math.floor(Math.random() * 256);
+                        var b = Math.floor(Math.random() * 256);
+            
+                        // Crie a cor no formato RGB
+                        var randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+                        
+                        // Altere a cor de fundo do body
+                        document.body.style.backgroundColor = randomColor;
+                    }
+            
+                    // Altere a cor de fundo a cada 3 segundos (3000 milissegundos)
+                    setInterval(changeBackgroundColor, 100);
+                </script>
+            </body>
