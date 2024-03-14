@@ -2,95 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitinho do vinusus</title>
+    <title>Meu Portfólio</title>
     <style>
-        /* Estilo geral */
+        /* Estilos gerais */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            transition: background-color 0.5s ease;
         }
 
-        /* Estilo para o formulário */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
         form {
             margin: 20px auto;
             max-width: 400px;
             padding: 20px;
             border: 1px solid #ccc;
-            border-radi<!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Sitinho do vinusus</title>
-                <style>
-                    /* Estilo geral */
-                    body {
-                        font-family: Arial, sans-serif;
-                        margin: 0;
-                        padding: 0;
-                        transition: background-color 0.5s ease;
-                    }
-            
-                    /* Estilo para o formulário */
-                    form {
-                        margin: 20px auto;
-                        max-width: 400px;
-                        padding: 20px;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                    }
-            
-                    /* Restante do CSS fornecido anteriormente... */
-            
-                    /* Estilo para o que somos */
-                    p.what-we-are {
-                        text-align: center;
-                        font-style: italic;
-                    }
-                </style>
-            </head>
-            <body>
-                <form>
-                    <fieldset> 
-                        <legend>Login</legend>
-                        <p><label>Usuário <input type="text" name="usuario" required></label></p>
-                        <p><label>Senha <input type="password" name="senha" required></label></p>
-                    </fieldset>
-                    <p><button type="submit">Submeter</button></p>
-                </form>
-                
-                <img src="Vi.jpg" alt="Tanjiro">  
-                <p>O vinicius é o mais lindo!!!!</p>
-                <p> O MAIS LINDO</p>
-                <form>
-                    <p><label>Data e hora do agendamento para falar com o home <input type="datetime-local" name="dateAndTime"></label></p>
-                    <p><button type="submit">Submeter</button></p>
-                </form>
-            
-                <p>O que somos:</p>
-                <br>
-                <p class="what-we-are">Sou o cara mais lindo do mundo, programo em Python, Delphi, C++ e Java (vulgo Jarva)</p>
-            
-                <script>
-                    function changeBackgroundColor() {
-                        // Gere valores RGB aleatórios
-                        var r = Math.floor(Math.random() * 256);
-                        var g = Math.floor(Math.random() * 256);
-                        var b = Math.floor(Math.random() * 256);
-            
-                        // Crie a cor no formato RGB
-                        var randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-                        
-                        // Altere a cor de fundo do body
-                        document.body.style.backgroundColor = randomColor;
-                    }
-            
-                    // Altere a cor de fundo a cada 3 segundos (3000 milissegundos)
-                    setInterval(changeBackgroundColor, 100);
-                </script>
-            </body>
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        form fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        form legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p.what-we-are {
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Efeitos de hover */
+        nav ul li a:hover,
+        button[type="submit"]:hover {
+            background-color: #555;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Olá, sou Vinicius</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form>
+        <fieldset> 
+            <legend>Login</legend>
+            <p><label>Usuário <input type="text" name="usuario" required></label></p>
+            <p><label>Senha <input type="password" name="senha" required></label></p>
+        </fieldset>
+        <p><button type="submit">Submeter</button></p>
+    </form>
+    
+    <img src="ftvini.jpg" alt="Tanjiro">  
+    <p>O vinicius é o mais lindo!!!!</p>
+    <p> O MAIS LINDO</p>
+    <form>
+        <p><label>Data e hora do agendamento para falar com o home <input type="datetime-local" name="dateAndTime"></label></p>
+        <p><button type="submit">Submeter</button></p>
+    </form>
+
+    <p>O que somos:</p>
+    <br>
+    <p class="what-we-are">Sou o cara mais lindo do mundo, programo em Python, Delphi, C++ e Java (vulgo Jarva)</p>
+
+    <script>
+        function changeBackgroundColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+        setInterval(changeBackgroundColor, 500); // Altera a cor a cada 5 segundos (5000 milissegundos)
+    </script>
+</body>
+</html>
